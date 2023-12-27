@@ -31,7 +31,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.den.consumeapi.R
 import com.den.consumeapi.model.Kontak
+import com.den.consumeapi.navigation.DestinasiNavigasi
 import com.den.consumeapi.ui.home.viewmodel.KontakUIState
+
+object DestinasiHome : DestinasiNavigasi {
+    override val route = "home"
+    override val titleRes = "Kontak"
+}
 
 @Composable
 fun HomeStatus(
