@@ -32,12 +32,23 @@ import androidx.compose.ui.unit.dp
 import com.den.consumeapi.R
 import com.den.consumeapi.model.Kontak
 import com.den.consumeapi.navigation.DestinasiNavigasi
+import com.den.consumeapi.ui.home.viewmodel.HomeViewModel
 import com.den.consumeapi.ui.home.viewmodel.KontakUIState
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.den.consumeapi.ui.PenyediaViewModel
 
 object DestinasiHome : DestinasiNavigasi {
     override val route = "home"
     override val titleRes = "Kontak"
 }
+
+@Composable
+fun HomeScreen(
+    navigateToItemEntry: () -> Unit,
+    modifier: Modifier = Modifier,
+    onDetailClick: (Int) -> Unit = {},
+    viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.Factory)
+){}
 
 @Composable
 fun HomeStatus(
