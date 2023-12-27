@@ -9,7 +9,7 @@ import com.den.consumeapi.model.Kontak
 import com.den.consumeapi.repository.KontakRepository
 import kotlinx.coroutines.launch
 
-class insertViewModel(private val kontakRepository: KontakRepository) : ViewModel() {
+class InsertViewModel(private val kontakRepository: KontakRepository) : ViewModel() {
 
     var insertKontakState by mutableStateOf(InsertUiState())
         private set
